@@ -8,13 +8,7 @@
 
 <sup>&#42;</sup> Corresponding authors.
 
-<a href="https://ml4h.ahli.cc/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/ahli_logo_dark.svg">
-    <img src="assets/ahli_logo_light.png" alt="AHLI — organizer of the Machine Learning for Health Symposium" width="190">
-  </picture>
-</a><br>
-<strong>ML4H 2026 · Machine Learning for Health</strong>
+<a href="https://ml4h.ahli.cc/"><img src="assets/ml4h_lockup.svg" alt="Machine Learning for Health (ML4H)" width="290"></a>
 
 Code and vignette datasets for studying ethical value choices in rare-disease care.
 
@@ -140,6 +134,6 @@ Minda Zhao et al. *[Rare Diseases, Common Dilemmas: LLMs Prioritize Equal Resour
 
 ## 🏷️ License
 
-The code and generated-vignette release license is pending author confirmation. The Orphanet-derived disease seeds retain the source's CC BY 4.0 attribution above.
+Copyright 2026 the Rare Diseases, Common Dilemmas authors. The code, documentation, and synthetic vignette datasets are released under the [Apache License 2.0](LICENSE).
 
-Conference logos are from the official [ML4H](https://ml4h.ahli.cc/) and [AHLI](https://ahli.cc/) websites.
+The Orphanet-derived [`data/diseases.json`](data/diseases.json) retains its [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license and attribution above. The conference badge uses the official [AHLI](https://ahli.cc/) symbol; third-party branding is excluded from the Apache license.
