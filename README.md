@@ -4,9 +4,21 @@
 
 ### LLMs Prioritize Equal Resource Distribution over Patient Benefit in Decision-Making
 
-**Minda Zhao · Xu Han · Rishabh Goel · Maya Dagan · Noa Dagan · Adithya Madduri · Payal Chandak · Shilpa Nadimpalli Kobren · Isaac S. Kohane**
+**Minda Zhao<sup>&#42;</sup> · Xu Han · Rishabh Goel · Maya Dagan · Noa Dagan · Adithya Madduri · Payal Chandak<sup>&#42;</sup> · Shilpa Nadimpalli Kobren<sup>&#42;</sup> · Isaac S. Kohane<sup>&#42;</sup>**
+
+<sup>&#42;</sup> Corresponding authors.
+
+<a href="https://ml4h.ahli.cc/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ahli_logo_dark.svg">
+    <img src="assets/ahli_logo_light.png" alt="AHLI — organizer of the Machine Learning for Health Symposium" width="190">
+  </picture>
+</a><br>
+<strong>ML4H 2026 · Machine Learning for Health</strong>
 
 Code and vignette datasets for studying ethical value choices in rare-disease care.
+
+[**Paper**](https://arxiv.org/abs/2608.25236) | [**PDF**](https://arxiv.org/pdf/2608.25236) | [**DOI**](https://doi.org/10.48550/arXiv.2608.25236) | [**Code & Data**](https://github.com/Mininda/Rare_Diseases_Common_Dilemmas)
 
 [**Dataset**](#-dataset) | [**Quick start**](#-quick-start) | [**Generate vignettes**](#-generate-vignettes)
 
@@ -124,10 +136,10 @@ Newly generated vignettes retain the intended value labels and are marked `human
 
 ## 📝 Paper
 
-Minda Zhao et al. *Rare Diseases, Common Dilemmas: LLMs Prioritize Equal Resource Distribution over Patient Benefit in Decision-Making.*
-
-Publication links and final citation metadata will be added with the camera-ready paper.
+Minda Zhao et al. *[Rare Diseases, Common Dilemmas: LLMs Prioritize Equal Resource Distribution over Patient Benefit in Decision-Making](https://arxiv.org/abs/2608.25236).* arXiv:2608.25236, 2026. [PDF](https://arxiv.org/pdf/2608.25236) · [DOI](https://doi.org/10.48550/arXiv.2608.25236).
 
 ## 🏷️ License
 
 The code and generated-vignette release license is pending author confirmation. The Orphanet-derived disease seeds retain the source's CC BY 4.0 attribution above.
+
+Conference logos are from the official [ML4H](https://ml4h.ahli.cc/) and [AHLI](https://ahli.cc/) websites.
