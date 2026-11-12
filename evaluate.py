@@ -14,14 +14,14 @@ FIELDS = ["vignette_id", "model", "run", "value_a", "value_b", "choice",
           "selected_value", "selected_principle", "status", "raw_response"]
 
 
-def evaluate_one(job, model, hide_value_alignment=False):
+def evaluate_one(job, model):
     case, run = job
     row = dict(vignette_id=case["id"], model=model.model, run=run,
                value_a=case["value_a"], value_b=case["value_b"],
                choice="ERROR", selected_value="", selected_principle="",
                status="error", raw_response="")
     try:
-        text = model_text(case["vignette"]) if hide_value_alignment else case["vignette"]
+        text = model_text(case["vignette"])
         row["raw_response"] = model(PROMPT.format(vignette_text=text))
         row["choice"] = parse_choice(row["raw_response"])
         row["status"] = "valid" if row["choice"] in {"A", "B"} else "invalid"
@@ -41,8 +41,6 @@ def main():
     parser.add_argument("--limit", type=positive_int, help="Evaluate only the first N cases.")
     parser.add_argument("--runs", type=positive_int, default=1)
     parser.add_argument("--workers", type=positive_int, default=4)
-    parser.add_argument("--hide-value-alignment", action="store_true",
-                        help="Remove trailing Value Alignment annotations; changes the original 208-case input.")
     parser.add_argument("--check", action="store_true", help="Validate data without API calls.")
     args = parser.parse_args()
     cases = load_json(args.data)
@@ -57,7 +55,7 @@ def main():
     with output_file(args.output) as handle, ThreadPoolExecutor(args.workers) as pool:
         writer = csv.DictWriter(handle, fieldnames=FIELDS)
         writer.writeheader()
-        for row in pool.map(lambda job: evaluate_one(job, model, args.hide_value_alignment), jobs):
+        for row in pool.map(lambda job: evaluate_one(job, model), jobs):
             writer.writerow(row)
             handle.flush()
             valid += row["status"] == "valid"
